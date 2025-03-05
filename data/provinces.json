@@ -1,0 +1,651 @@
+[
+  {
+    "id": 1,
+    "name": "Adana",
+    "area": 13844,
+    "areaCode": [
+      322
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Adıyaman",
+    "area": 7337,
+    "areaCode": [
+      416
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Afyonkarahisar",
+    "area": 14016,
+    "areaCode": [
+      272
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ağrı",
+    "area": 11099,
+    "areaCode": [
+      472
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Amasya",
+    "area": 5628,
+    "areaCode": [
+      358
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Ankara",
+    "area": 25632,
+    "areaCode": [
+      312
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Antalya",
+    "area": 20177,
+    "areaCode": [
+      242
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Artvin",
+    "area": 7393,
+    "areaCode": [
+      466
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Aydın",
+    "area": 8116,
+    "areaCode": [
+      256
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Balıkesir",
+    "area": 14583,
+    "areaCode": [
+      266
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Bilecik",
+    "area": 4179,
+    "areaCode": [
+      228
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Bingöl",
+    "area": 8004,
+    "areaCode": [
+      426
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Bitlis",
+    "area": 8294,
+    "areaCode": [
+      434
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Bolu",
+    "area": 8313,
+    "areaCode": [
+      374
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Burdur",
+    "area": 7175,
+    "areaCode": [
+      248
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Bursa",
+    "area": 10813,
+    "areaCode": [
+      224
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Çanakkale",
+    "area": 9817,
+    "areaCode": [
+      286
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Çankırı",
+    "area": 7542,
+    "areaCode": [
+      376
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Çorum",
+    "area": 12428,
+    "areaCode": [
+      364
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Denizli",
+    "area": 12134,
+    "areaCode": [
+      258
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Diyarbakır",
+    "area": 15168,
+    "areaCode": [
+      412
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Edirne",
+    "area": 6145,
+    "areaCode": [
+      284
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Elazığ",
+    "area": 9383,
+    "areaCode": [
+      424
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Erzincan",
+    "area": 11815,
+    "areaCode": [
+      446
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Erzurum",
+    "area": 25006,
+    "areaCode": [
+      442
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Eskişehir",
+    "area": 13960,
+    "areaCode": [
+      222
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Gaziantep",
+    "area": 6803,
+    "areaCode": [
+      342
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Giresun",
+    "area": 7025,
+    "areaCode": [
+      454
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Gümüşhane",
+    "area": 6668,
+    "areaCode": [
+      456
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Hakkari",
+    "area": 7095,
+    "areaCode": [
+      438
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Hatay",
+    "area": 5524,
+    "areaCode": [
+      326
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Isparta",
+    "area": 8946,
+    "areaCode": [
+      246
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Mersin",
+    "area": 16010,
+    "areaCode": [
+      324
+    ]
+  },
+  {
+    "id": 34,
+    "name": "İstanbul",
+    "area": 5461,
+    "areaCode": [
+      212,
+      216
+    ]
+  },
+  {
+    "id": 35,
+    "name": "İzmir",
+    "area": 11891,
+    "areaCode": [
+      232
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Kars",
+    "area": 10193,
+    "areaCode": [
+      474
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Kastamonu",
+    "area": 13064,
+    "areaCode": [
+      366
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Kayseri",
+    "area": 16970,
+    "areaCode": [
+      352
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Kırklareli",
+    "area": 6459,
+    "areaCode": [
+      288
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Kırşehir",
+    "area": 6584,
+    "areaCode": [
+      386
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Kocaeli",
+    "area": 3397,
+    "areaCode": [
+      262
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Konya",
+    "area": 40838,
+    "areaCode": [
+      332
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Kütahya",
+    "area": 11634,
+    "areaCode": [
+      274
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Malatya",
+    "area": 12259,
+    "areaCode": [
+      422
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Manisa",
+    "area": 13339,
+    "areaCode": [
+      236
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Kahramanmaraş",
+    "area": 14520,
+    "areaCode": [
+      344
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Mardin",
+    "area": 8780,
+    "areaCode": [
+      482
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Muğla",
+    "area": 12654,
+    "areaCode": [
+      252
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Muş",
+    "area": 8650,
+    "areaCode": [
+      436
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Nevşehir",
+    "area": 5485,
+    "areaCode": [
+      384
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Niğde",
+    "area": 7234,
+    "areaCode": [
+      388
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Ordu",
+    "area": 5861,
+    "areaCode": [
+      452
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Rize",
+    "area": 3835,
+    "areaCode": [
+      464
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Sakarya",
+    "area": 4824,
+    "areaCode": [
+      264
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Samsun",
+    "area": 9725,
+    "areaCode": [
+      362
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Siirt",
+    "area": 5717,
+    "areaCode": [
+      484
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Sinop",
+    "area": 5717,
+    "areaCode": [
+      368
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Sivas",
+    "area": 28164,
+    "areaCode": [
+      346
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Tekirdağ",
+    "area": 6190,
+    "areaCode": [
+      282
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Tokat",
+    "area": 10042,
+    "areaCode": [
+      356
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Trabzon",
+    "area": 4628,
+    "areaCode": [
+      462
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Tunceli",
+    "area": 7582,
+    "areaCode": [
+      428
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Şanlıurfa",
+    "area": 19242,
+    "areaCode": [
+      414
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Uşak",
+    "area": 5555,
+    "areaCode": [
+      276
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Van",
+    "area": 20921,
+    "areaCode": [
+      432
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Yozgat",
+    "area": 13690,
+    "areaCode": [
+      354
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Zonguldak",
+    "area": 3342,
+    "areaCode": [
+      372
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Aksaray",
+    "area": 7659,
+    "areaCode": [
+      382
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Bayburt",
+    "area": 3746,
+    "areaCode": [
+      458
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Karaman",
+    "area": 8678,
+    "areaCode": [
+      338
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Kırıkkale",
+    "area": 4791,
+    "areaCode": [
+      318
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Batman",
+    "area": 4477,
+    "areaCode": [
+      488
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Şırnak",
+    "area": 7078,
+    "areaCode": [
+      486
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Bartın",
+    "area": 2330,
+    "areaCode": [
+      378
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Ardahan",
+    "area": 4934,
+    "areaCode": [
+      478
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Iğdır",
+    "area": 3664,
+    "areaCode": [
+      476
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Yalova",
+    "area": 798,
+    "areaCode": [
+      226
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Karabük",
+    "area": 4142,
+    "areaCode": [
+      370
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Kilis",
+    "area": 1412,
+    "areaCode": [
+      348
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Osmaniye",
+    "area": 3320,
+    "areaCode": [
+      328
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Düzce",
+    "area": 2492,
+    "areaCode": [
+      380
+    ]
+  }
+]
