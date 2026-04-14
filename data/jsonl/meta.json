@@ -1,0 +1,583 @@
+{
+  "built_at_utc": "2026-04-14T10:21:48.228782+00:00",
+  "source_data_new": "C:\\CODING_STUFF\\PROJECTS\\a2-UNFINISHED\\turkey-geo-api\\data-new",
+  "source_data_more": "C:\\CODING_STUFF\\PROJECTS\\a2-UNFINISHED\\turkey-geo-api\\data-more",
+  "layout": "Root: provinces.jsonl. Per province: province-{id}/districts.jsonl, neighborhoods.jsonl, streets.jsonl; towns.jsonl and villages.jsonl only when non-empty.",
+  "counts": {
+    "provinces": 81,
+    "districts": 973,
+    "neighborhoods": 73496,
+    "towns": 390,
+    "villages": 18171,
+    "streets_total": 1270829,
+    "by_province": {
+      "1": {
+        "districts": 15,
+        "neighborhoods": 833,
+        "streets": 37113,
+        "towns": 0,
+        "villages": 0
+      },
+      "2": {
+        "districts": 9,
+        "neighborhoods": 1140,
+        "streets": 8351,
+        "towns": 14,
+        "villages": 454
+      },
+      "3": {
+        "districts": 18,
+        "neighborhoods": 1079,
+        "streets": 19181,
+        "towns": 42,
+        "villages": 421
+      },
+      "4": {
+        "districts": 8,
+        "neighborhoods": 964,
+        "streets": 5765,
+        "towns": 4,
+        "villages": 564
+      },
+      "5": {
+        "districts": 7,
+        "neighborhoods": 706,
+        "streets": 5532,
+        "towns": 1,
+        "villages": 372
+      },
+      "6": {
+        "districts": 25,
+        "neighborhoods": 1438,
+        "streets": 51759,
+        "towns": 0,
+        "villages": 0
+      },
+      "7": {
+        "districts": 19,
+        "neighborhoods": 917,
+        "streets": 42435,
+        "towns": 0,
+        "villages": 0
+      },
+      "8": {
+        "districts": 9,
+        "neighborhoods": 1842,
+        "streets": 3270,
+        "towns": 0,
+        "villages": 320
+      },
+      "9": {
+        "districts": 17,
+        "neighborhoods": 674,
+        "streets": 36599,
+        "towns": 0,
+        "villages": 0
+      },
+      "10": {
+        "districts": 20,
+        "neighborhoods": 1136,
+        "streets": 46720,
+        "towns": 0,
+        "villages": 0
+      },
+      "11": {
+        "districts": 8,
+        "neighborhoods": 370,
+        "streets": 4840,
+        "towns": 3,
+        "villages": 243
+      },
+      "12": {
+        "districts": 8,
+        "neighborhoods": 1096,
+        "streets": 3931,
+        "towns": 3,
+        "villages": 320
+      },
+      "13": {
+        "districts": 7,
+        "neighborhoods": 754,
+        "streets": 4536,
+        "towns": 6,
+        "villages": 350
+      },
+      "14": {
+        "districts": 9,
+        "neighborhoods": 1619,
+        "streets": 7743,
+        "towns": 3,
+        "villages": 486
+      },
+      "15": {
+        "districts": 11,
+        "neighborhoods": 501,
+        "streets": 7868,
+        "towns": 4,
+        "villages": 193
+      },
+      "16": {
+        "districts": 17,
+        "neighborhoods": 1075,
+        "streets": 44566,
+        "towns": 0,
+        "villages": 0
+      },
+      "17": {
+        "districts": 12,
+        "neighborhoods": 911,
+        "streets": 12585,
+        "towns": 11,
+        "villages": 575
+      },
+      "18": {
+        "districts": 12,
+        "neighborhoods": 631,
+        "streets": 4960,
+        "towns": 5,
+        "villages": 368
+      },
+      "19": {
+        "districts": 14,
+        "neighborhoods": 1476,
+        "streets": 10821,
+        "towns": 2,
+        "villages": 757
+      },
+      "20": {
+        "districts": 19,
+        "neighborhoods": 620,
+        "streets": 34486,
+        "towns": 0,
+        "villages": 0
+      },
+      "21": {
+        "districts": 17,
+        "neighborhoods": 1057,
+        "streets": 13824,
+        "towns": 0,
+        "villages": 0
+      },
+      "22": {
+        "districts": 9,
+        "neighborhoods": 373,
+        "streets": 7395,
+        "towns": 7,
+        "villages": 253
+      },
+      "23": {
+        "districts": 11,
+        "neighborhoods": 1430,
+        "streets": 11950,
+        "towns": 9,
+        "villages": 546
+      },
+      "24": {
+        "districts": 9,
+        "neighborhoods": 1025,
+        "streets": 7112,
+        "towns": 6,
+        "villages": 522
+      },
+      "25": {
+        "districts": 20,
+        "neighborhoods": 1190,
+        "streets": 10160,
+        "towns": 0,
+        "villages": 0
+      },
+      "26": {
+        "districts": 14,
+        "neighborhoods": 542,
+        "streets": 13507,
+        "towns": 0,
+        "villages": 0
+      },
+      "27": {
+        "districts": 9,
+        "neighborhoods": 742,
+        "streets": 20896,
+        "towns": 0,
+        "villages": 0
+      },
+      "28": {
+        "districts": 16,
+        "neighborhoods": 2702,
+        "streets": 7901,
+        "towns": 8,
+        "villages": 549
+      },
+      "29": {
+        "districts": 6,
+        "neighborhoods": 1093,
+        "streets": 3645,
+        "towns": 8,
+        "villages": 316
+      },
+      "30": {
+        "districts": 5,
+        "neighborhoods": 448,
+        "streets": 2111,
+        "towns": 3,
+        "villages": 116
+      },
+      "31": {
+        "districts": 15,
+        "neighborhoods": 601,
+        "streets": 31350,
+        "towns": 0,
+        "villages": 0
+      },
+      "32": {
+        "districts": 13,
+        "neighborhoods": 577,
+        "streets": 11224,
+        "towns": 9,
+        "villages": 204
+      },
+      "33": {
+        "districts": 13,
+        "neighborhoods": 811,
+        "streets": 27594,
+        "towns": 0,
+        "villages": 0
+      },
+      "34": {
+        "districts": 39,
+        "neighborhoods": 973,
+        "streets": 90866,
+        "towns": 0,
+        "villages": 0
+      },
+      "35": {
+        "districts": 30,
+        "neighborhoods": 1313,
+        "streets": 66730,
+        "towns": 0,
+        "villages": 0
+      },
+      "36": {
+        "districts": 8,
+        "neighborhoods": 518,
+        "streets": 2375,
+        "towns": 1,
+        "villages": 380
+      },
+      "37": {
+        "districts": 20,
+        "neighborhoods": 4336,
+        "streets": 9856,
+        "towns": 0,
+        "villages": 1054
+      },
+      "38": {
+        "districts": 16,
+        "neighborhoods": 715,
+        "streets": 19452,
+        "towns": 0,
+        "villages": 0
+      },
+      "39": {
+        "districts": 8,
+        "neighborhoods": 300,
+        "streets": 7519,
+        "towns": 13,
+        "villages": 179
+      },
+      "40": {
+        "districts": 7,
+        "neighborhoods": 420,
+        "streets": 7405,
+        "towns": 3,
+        "villages": 252
+      },
+      "41": {
+        "districts": 12,
+        "neighborhoods": 488,
+        "streets": 25367,
+        "towns": 0,
+        "villages": 0
+      },
+      "42": {
+        "districts": 31,
+        "neighborhoods": 1145,
+        "streets": 60239,
+        "towns": 0,
+        "villages": 0
+      },
+      "43": {
+        "districts": 13,
+        "neighborhoods": 932,
+        "streets": 15135,
+        "towns": 15,
+        "villages": 545
+      },
+      "44": {
+        "districts": 13,
+        "neighborhoods": 722,
+        "streets": 11378,
+        "towns": 0,
+        "villages": 0
+      },
+      "45": {
+        "districts": 17,
+        "neighborhoods": 1093,
+        "streets": 17864,
+        "towns": 0,
+        "villages": 0
+      },
+      "46": {
+        "districts": 11,
+        "neighborhoods": 724,
+        "streets": 18458,
+        "towns": 0,
+        "villages": 0
+      },
+      "47": {
+        "districts": 10,
+        "neighborhoods": 707,
+        "streets": 8143,
+        "towns": 0,
+        "villages": 0
+      },
+      "48": {
+        "districts": 13,
+        "neighborhoods": 574,
+        "streets": 24515,
+        "towns": 0,
+        "villages": 0
+      },
+      "49": {
+        "districts": 6,
+        "neighborhoods": 695,
+        "streets": 4861,
+        "towns": 17,
+        "villages": 367
+      },
+      "50": {
+        "districts": 8,
+        "neighborhoods": 383,
+        "streets": 8511,
+        "towns": 15,
+        "villages": 153
+      },
+      "51": {
+        "districts": 6,
+        "neighborhoods": 351,
+        "streets": 11287,
+        "towns": 23,
+        "villages": 131
+      },
+      "52": {
+        "districts": 19,
+        "neighborhoods": 774,
+        "streets": 9801,
+        "towns": 0,
+        "villages": 0
+      },
+      "53": {
+        "districts": 12,
+        "neighborhoods": 1384,
+        "streets": 5090,
+        "towns": 6,
+        "villages": 343
+      },
+      "54": {
+        "districts": 16,
+        "neighborhoods": 677,
+        "streets": 24074,
+        "towns": 0,
+        "villages": 0
+      },
+      "55": {
+        "districts": 17,
+        "neighborhoods": 1259,
+        "streets": 26820,
+        "towns": 0,
+        "villages": 0
+      },
+      "56": {
+        "districts": 7,
+        "neighborhoods": 522,
+        "streets": 3519,
+        "towns": 5,
+        "villages": 280
+      },
+      "57": {
+        "districts": 9,
+        "neighborhoods": 1990,
+        "streets": 5441,
+        "towns": 0,
+        "villages": 465
+      },
+      "58": {
+        "districts": 17,
+        "neighborhoods": 2310,
+        "streets": 12793,
+        "towns": 7,
+        "villages": 1234
+      },
+      "59": {
+        "districts": 11,
+        "neighborhoods": 388,
+        "streets": 25214,
+        "towns": 0,
+        "villages": 0
+      },
+      "60": {
+        "districts": 12,
+        "neighborhoods": 1449,
+        "streets": 11766,
+        "towns": 26,
+        "villages": 613
+      },
+      "61": {
+        "districts": 18,
+        "neighborhoods": 718,
+        "streets": 18217,
+        "towns": 0,
+        "villages": 0
+      },
+      "62": {
+        "districts": 8,
+        "neighborhoods": 1054,
+        "streets": 3062,
+        "towns": 1,
+        "villages": 366
+      },
+      "63": {
+        "districts": 13,
+        "neighborhoods": 1468,
+        "streets": 21015,
+        "towns": 0,
+        "villages": 0
+      },
+      "64": {
+        "districts": 6,
+        "neighborhoods": 697,
+        "streets": 9993,
+        "towns": 5,
+        "villages": 245
+      },
+      "65": {
+        "districts": 13,
+        "neighborhoods": 697,
+        "streets": 16453,
+        "towns": 0,
+        "villages": 0
+      },
+      "66": {
+        "districts": 14,
+        "neighborhoods": 842,
+        "streets": 12039,
+        "towns": 22,
+        "villages": 553
+      },
+      "67": {
+        "districts": 8,
+        "neighborhoods": 1499,
+        "streets": 7276,
+        "towns": 17,
+        "villages": 378
+      },
+      "68": {
+        "districts": 8,
+        "neighborhoods": 419,
+        "streets": 16057,
+        "towns": 14,
+        "villages": 174
+      },
+      "69": {
+        "districts": 3,
+        "neighborhoods": 238,
+        "streets": 2159,
+        "towns": 2,
+        "villages": 170
+      },
+      "70": {
+        "districts": 6,
+        "neighborhoods": 429,
+        "streets": 6724,
+        "towns": 5,
+        "villages": 158
+      },
+      "71": {
+        "districts": 9,
+        "neighborhoods": 346,
+        "streets": 10187,
+        "towns": 2,
+        "villages": 185
+      },
+      "72": {
+        "districts": 6,
+        "neighborhoods": 741,
+        "streets": 5524,
+        "towns": 5,
+        "villages": 290
+      },
+      "73": {
+        "districts": 7,
+        "neighborhoods": 401,
+        "streets": 4414,
+        "towns": 12,
+        "villages": 195
+      },
+      "74": {
+        "districts": 4,
+        "neighborhoods": 1026,
+        "streets": 2973,
+        "towns": 4,
+        "villages": 260
+      },
+      "75": {
+        "districts": 6,
+        "neighborhoods": 348,
+        "streets": 2108,
+        "towns": 1,
+        "villages": 225
+      },
+      "76": {
+        "districts": 4,
+        "neighborhoods": 248,
+        "streets": 3020,
+        "towns": 3,
+        "villages": 163
+      },
+      "77": {
+        "districts": 6,
+        "neighborhoods": 107,
+        "streets": 8148,
+        "towns": 8,
+        "villages": 43
+      },
+      "78": {
+        "districts": 6,
+        "neighborhoods": 1104,
+        "streets": 3546,
+        "towns": 1,
+        "villages": 277
+      },
+      "79": {
+        "districts": 4,
+        "neighborhoods": 301,
+        "streets": 2702,
+        "towns": 0,
+        "villages": 139
+      },
+      "80": {
+        "districts": 7,
+        "neighborhoods": 620,
+        "streets": 10315,
+        "towns": 7,
+        "villages": 158
+      },
+      "81": {
+        "districts": 8,
+        "neighborhoods": 678,
+        "streets": 8688,
+        "towns": 2,
+        "villages": 267
+      }
+    }
+  }
+}

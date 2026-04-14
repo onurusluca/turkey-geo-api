@@ -1,113 +1,91 @@
 import { Request, Response } from "express";
-import neighborhoods from "../../data/neighborhoods.json";
-import { Neighborhood } from "../types";
+import { geo } from "../data/loadGeoData";
+import type { Neighborhood } from "../types";
+import { jsonError } from "../utils/apiResponse";
+import { sendPaginated } from "../utils/listResponse";
+import { parsePathIntParam } from "../utils/routeParams";
+import { normalizeTurkish } from "../utils/turkishSearch";
+
+const neighborhoodRows = geo.neighborhoods;
+
+const searchNeighborhood = (n: Neighborhood, qn: string): boolean =>
+  (n.name !== null && normalizeTurkish(n.name).includes(qn)) ||
+  (n.fullOfficialName !== null &&
+    normalizeTurkish(n.fullOfficialName).includes(qn)) ||
+  normalizeTurkish(n.districtName).includes(qn) ||
+  normalizeTurkish(n.provinceName).includes(qn);
 
 const getAllNeighborhoods = (req: Request, res: Response): void => {
   try {
-    res.json(neighborhoods);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve neighborhoods" });
+    sendPaginated(res, req, neighborhoodRows, searchNeighborhood);
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve neighborhoods");
   }
 };
 
 const getNeighborhoodById = (req: Request, res: Response): void => {
   try {
-    // Check if ID parameter exists
-    if (!req.params.id) {
-      res.status(400).json({ error: "Neighborhood ID is required" });
+    const idParam = parsePathIntParam(req.params.id);
+    if (idParam === "missing") {
+      jsonError(res, req, 400, "Neighborhood ID is required");
       return;
     }
-
-    const id = parseInt(req.params.id);
-
-    // Check if ID is a valid number
-    if (isNaN(id)) {
-      res.status(400).json({ error: "Invalid neighborhood ID" });
+    if (idParam === "invalid") {
+      jsonError(res, req, 400, "Invalid neighborhood ID");
       return;
     }
+    const id = idParam;
 
-    const neighborhood = (neighborhoods as Neighborhood[]).find(
-      (n) => n.id === id
-    );
+    const neighborhood = neighborhoodRows.find((n) => n.id === id);
 
     if (!neighborhood) {
-      res.status(404).json({ error: "Neighborhood not found" });
+      jsonError(res, req, 404, "Neighborhood not found");
       return;
     }
 
     res.json(neighborhood);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve neighborhood" });
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve neighborhood");
   }
 };
 
 const getNeighborhoodsByDistrictId = (req: Request, res: Response): void => {
   try {
-    // Check if districtId parameter exists
-    if (!req.params.districtId) {
-      res.status(400).json({ error: "District ID is required" });
+    const districtIdParam = parsePathIntParam(req.params.districtId);
+    if (districtIdParam === "missing") {
+      jsonError(res, req, 400, "District ID is required");
       return;
     }
-
-    const districtId = parseInt(req.params.districtId);
-
-    // Check if districtId is a valid number
-    if (isNaN(districtId)) {
-      res.status(400).json({ error: "Invalid district ID" });
+    if (districtIdParam === "invalid") {
+      jsonError(res, req, 400, "Invalid district ID");
       return;
     }
+    const districtId = districtIdParam;
 
-    const filteredNeighborhoods = (neighborhoods as Neighborhood[]).filter(
-      (n) => n.districtId === districtId
-    );
-
-    if (filteredNeighborhoods.length === 0) {
-      res
-        .status(404)
-        .json({ error: "No neighborhoods found for this district" });
-      return;
-    }
-
-    res.json(filteredNeighborhoods);
-  } catch (error) {
-    res
-      .status(500)
-      .json({ error: "Failed to retrieve neighborhoods for district" });
+    const rows = neighborhoodRows.filter((n) => n.districtId === districtId);
+    sendPaginated(res, req, rows, searchNeighborhood);
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve neighborhoods for district");
   }
 };
 
 const getNeighborhoodsByProvinceId = (req: Request, res: Response): void => {
   try {
-    // Check if provinceId parameter exists
-    if (!req.params.provinceId) {
-      res.status(400).json({ error: "Province ID is required" });
+    const provinceIdParam = parsePathIntParam(req.params.provinceId);
+    if (provinceIdParam === "missing") {
+      jsonError(res, req, 400, "Province ID is required");
       return;
     }
-
-    const provinceId = parseInt(req.params.provinceId);
-
-    // Check if provinceId is a valid number
-    if (isNaN(provinceId)) {
-      res.status(400).json({ error: "Invalid province ID" });
+    if (provinceIdParam === "invalid") {
+      jsonError(res, req, 400, "Invalid province ID");
       return;
     }
+    const provinceId = provinceIdParam;
 
-    const filteredNeighborhoods = (neighborhoods as Neighborhood[]).filter(
-      (n) => n.provinceId === provinceId
-    );
-
-    if (filteredNeighborhoods.length === 0) {
-      res
-        .status(404)
-        .json({ error: "No neighborhoods found for this province" });
-      return;
-    }
-
-    res.json(filteredNeighborhoods);
-  } catch (error) {
-    res
-      .status(500)
-      .json({ error: "Failed to retrieve neighborhoods for province" });
+    const rows = neighborhoodRows.filter((n) => n.provinceId === provinceId);
+    sendPaginated(res, req, rows, searchNeighborhood);
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve neighborhoods for province");
   }
 };
 

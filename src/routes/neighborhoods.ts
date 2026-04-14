@@ -9,8 +9,8 @@ import {
 const router = express.Router();
 
 router.get("/", getAllNeighborhoods);
-router.get("/:id", getNeighborhoodById);
 router.get("/district/:districtId", getNeighborhoodsByDistrictId);
 router.get("/province/:provinceId", getNeighborhoodsByProvinceId);
+router.get("/:id", getNeighborhoodById);
 
 export default router;

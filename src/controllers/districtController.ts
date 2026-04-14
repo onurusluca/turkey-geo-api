@@ -1,74 +1,70 @@
 import { Request, Response } from "express";
-import districts from "../../data/districts.json";
-import { District } from "../types";
+import { geo } from "../data/loadGeoData";
+import type { District } from "../types";
+import { jsonError } from "../utils/apiResponse";
+import { sendPaginated } from "../utils/listResponse";
+import { parsePathIntParam } from "../utils/routeParams";
+import { normalizeTurkish } from "../utils/turkishSearch";
+
+const districtRows = geo.districts;
+
+const searchDistrict = (d: District, qn: string): boolean =>
+  normalizeTurkish(d.name).includes(qn) ||
+  normalizeTurkish(d.provinceName).includes(qn) ||
+  (d.fullOfficialName !== null &&
+    normalizeTurkish(d.fullOfficialName).includes(qn));
 
 const getAllDistricts = (req: Request, res: Response): void => {
   try {
-    res.json(districts);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve districts" });
+    sendPaginated(res, req, districtRows, searchDistrict);
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve districts");
   }
 };
 
 const getDistrictById = (req: Request, res: Response): void => {
   try {
-    // Check if ID parameter exists
-    if (!req.params.id) {
-      res.status(400).json({ error: "District ID is required" });
+    const idParam = parsePathIntParam(req.params.id);
+    if (idParam === "missing") {
+      jsonError(res, req, 400, "District ID is required");
       return;
     }
-
-    const id = parseInt(req.params.id);
-
-    // Check if ID is a valid number
-    if (isNaN(id)) {
-      res.status(400).json({ error: "Invalid district ID" });
+    if (idParam === "invalid") {
+      jsonError(res, req, 400, "Invalid district ID");
       return;
     }
+    const id = idParam;
 
-    const district = (districts as District[]).find((d) => d.id === id);
+    const district = districtRows.find((d) => d.id === id);
 
     if (!district) {
-      res.status(404).json({ error: "District not found" });
+      jsonError(res, req, 404, "District not found");
       return;
     }
 
     res.json(district);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve district" });
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve district");
   }
 };
 
 const getDistrictsByProvinceId = (req: Request, res: Response): void => {
   try {
-    // Check if provinceId parameter exists
-    if (!req.params.provinceId) {
-      res.status(400).json({ error: "Province ID is required" });
+    const provinceIdParam = parsePathIntParam(req.params.provinceId);
+    if (provinceIdParam === "missing") {
+      jsonError(res, req, 400, "Province ID is required");
       return;
     }
-
-    const provinceId = parseInt(req.params.provinceId);
-
-    // Check if provinceId is a valid number
-    if (isNaN(provinceId)) {
-      res.status(400).json({ error: "Invalid province ID" });
+    if (provinceIdParam === "invalid") {
+      jsonError(res, req, 400, "Invalid province ID");
       return;
     }
+    const provinceId = provinceIdParam;
 
-    const filteredDistricts = (districts as District[]).filter(
-      (d) => d.provinceId === provinceId
-    );
-
-    if (filteredDistricts.length === 0) {
-      res.status(404).json({ error: "No districts found for this province" });
-      return;
-    }
-
-    res.json(filteredDistricts);
-  } catch (error) {
-    res
-      .status(500)
-      .json({ error: "Failed to retrieve districts for province" });
+    const rows = districtRows.filter((d) => d.provinceId === provinceId);
+    sendPaginated(res, req, rows, searchDistrict);
+  } catch {
+    jsonError(res, req, 500, "Failed to retrieve districts for province");
   }
 };
 
