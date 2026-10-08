@@ -2,11 +2,11 @@
 
 REST API for Turkey’s provinces (il), districts (ilçe), neighborhoods (mahalle), streets (sokak), and — where present — towns (belde) and villages (köy). The server loads **`data/jsonl/`** into memory at startup.
 
-Dataset (April 2026): **81** provinces, **973** districts, **73,496** neighborhoods, **1,270,829** streets, **390** towns, **18,171** villages. Plan RAM accordingly (streets dominate).
+Dataset (October 2026): **81** provinces, **973** districts, **73,398** neighborhoods, **1,276,922** streets, **390** towns, **18,171** villages. Plan RAM accordingly (streets dominate).
 
 ## Data sources
 
-- [NVI address inquiry](https://adres.nvi.gov.tr/VatandasIslemleri/AdresSorgu) (aligned March 2026)
+- [NVI address inquiry](https://adres.nvi.gov.tr/VatandasIslemleri/AdresSorgu) (aligned October 2026)
 - [TÜİK population statistics](https://nip.tuik.gov.tr/) (October 2025)
 - [TÜİK data portal](https://veriportali.tuik.gov.tr/tr), [Biruni](https://biruni.tuik.gov.tr/medas), [Harita Genel Müdürlüğü](https://www.harita.gov.tr/)
 
@@ -91,7 +91,7 @@ MIT. See [LICENSE](./LICENSE). Issues and PRs: [github.com/onurusluca/turkey-geo
 
 # Türkiye Coğrafi Veri API
 
-İl, ilçe, mahalle, sokak ve varsa belde/köy kayıtları. Veri **`data/jsonl/`** altından başlangıçta belleğe yüklenir (Nisan 2026 paketi; sokak sayısı ~1,27 milyon — RAM’i buna göre ayarlayın).
+İl, ilçe, mahalle, sokak ve varsa belde/köy kayıtları. Veri **`data/jsonl/`** altından başlangıçta belleğe yüklenir (Ekim 2026 paketi; sokak sayısı ~1,28 milyon — RAM’i buna göre ayarlayın).
 
 Kaynaklar: [NVI Adres Sorgu](https://adres.nvi.gov.tr/VatandasIslemleri/AdresSorgu), [TÜİK](https://nip.tuik.gov.tr/), [HGM](https://www.harita.gov.tr/).
 
