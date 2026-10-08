@@ -32,8 +32,7 @@
         "dev": "bun --watch src/index.ts",
         "dev:node": "tsx watch src/index.ts",
         "lint": "eslint .",
-        "test": "bun test",
-        "update-data": "bun scripts/update_jsonl.ts"
+        "test": "bun test"
     },
     "dependencies": {
         "cors": "^2.8.6",
