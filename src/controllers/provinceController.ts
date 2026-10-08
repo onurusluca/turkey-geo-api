@@ -1,50 +1,20 @@
-import { Request, Response } from "express";
-import { geo } from "../data/loadGeoData";
+import type { Request, Response } from "express";
+import { getGeo } from "../data/loadGeoData";
 import type { Province } from "../types";
-import { jsonError } from "../utils/apiResponse";
+import { requirePathInt, sendById } from "../utils/handlers";
 import { sendPaginated } from "../utils/listResponse";
-import { parsePathIntParam } from "../utils/routeParams";
 import { normalizeTurkish } from "../utils/turkishSearch";
-
-const provinceRows = geo.provinces;
 
 const searchProvince = (p: Province, qn: string): boolean =>
   normalizeTurkish(p.name).includes(qn) ||
   (p.fullOfficialName !== null &&
     normalizeTurkish(p.fullOfficialName).includes(qn));
 
-const getAllProvinces = (req: Request, res: Response): void => {
-  try {
-    sendPaginated(res, req, provinceRows, searchProvince);
-  } catch {
-    jsonError(res, req, 500, "Failed to retrieve provinces");
-  }
-};
+export function getAllProvinces(req: Request, res: Response): void {
+  sendPaginated(res, req, getGeo().provinces, searchProvince);
+}
 
-const getProvinceById = (req: Request, res: Response): void => {
-  try {
-    const idParam = parsePathIntParam(req.params.id);
-    if (idParam === "missing") {
-      jsonError(res, req, 400, "Province ID is required");
-      return;
-    }
-    if (idParam === "invalid") {
-      jsonError(res, req, 400, "Invalid province ID");
-      return;
-    }
-    const id = idParam;
-
-    const province = provinceRows.find((p) => p.id === id);
-
-    if (!province) {
-      jsonError(res, req, 404, "Province not found");
-      return;
-    }
-
-    res.json(province);
-  } catch {
-    jsonError(res, req, 500, "Failed to retrieve province");
-  }
-};
-
-export { getAllProvinces, getProvinceById };
+export function getProvinceById(req: Request, res: Response): void {
+  const id = requirePathInt(req.params.id, "Province ID");
+  sendById(res, getGeo().provinceById, id, "Province not found");
+}
